@@ -9,7 +9,7 @@ function DashboardController($scope, $http, consts) {
 
   $scope.getSummary = function() {
     const url = `${consts.apiUrl}/billingSummary`;
-    $http.get(url).success(function({credit = 0, debt = 0}) {
+    $http.get(url).then(function({credit = 0, debt = 0}) {
       $scope.credit = credit
       $scope.debt = debt
       $scope.total = credit - debt

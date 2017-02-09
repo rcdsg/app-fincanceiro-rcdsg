@@ -13,12 +13,12 @@ function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
   $scope.getBillingCycles = function() {
     const page = parseInt($location.search().page) || 1
     const url = `${consts.apiUrl}/billingCycles?skip=${(page - 1) * 10}&limit=10`
-    $http.get(url).success(function(response) {
-      $scope.billingCycles = response
+    $http.get(url).then(function(resp) {
+      $scope.billingCycles = resp.data
       $scope.billingCycle = {}
       initCreditsAndDebts()
-      $http.get(`${consts.apiUrl}/billingCycles/count`).success(function(response) {
-        $scope.pages = Math.ceil(response.value / 10)
+      $http.get(`${consts.apiUrl}/billingCycles/count`).then(function(resp) {
+        $scope.pages = Math.ceil(resp.data.value / 10)
         tabs.show($scope, {tabList: true, tabCreate: true})
       })
     })
@@ -26,13 +26,13 @@ function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
 
   $scope.createBillingCycle = function() {
     const url = `${consts.apiUrl}/billingCycles`;
-    $http.post(url, $scope.billingCycle).success(function(response) {
+    $http.post(url, $scope.billingCycle).then(function(response) {
       $scope.billingCycle = {}
       initCreditsAndDebts()
       $scope.getBillingCycles()
       msgs.addSuccess('Operação realizada com sucesso!!')
-    }).error(function(data) {
-      msgs.addError(data.errors)
+    }).catch(function(resp) {
+      msgs.addError(resp.data.errors)
     })
   }
 
@@ -44,14 +44,14 @@ function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
 
   $scope.updateBillingCycle = function() {
     const url = `${consts.apiUrl}/billingCycles/${$scope.billingCycle._id}`
-    $http.put(url, $scope.billingCycle).success(function(response) {
+    $http.put(url, $scope.billingCycle).then(function(response) {
       $scope.billingCycle = {}
       initCreditsAndDebts()
       $scope.getBillingCycles()
       tabs.show($scope, {tabList: true, tabCreate: true})
       msgs.addSuccess('Operação realizada com sucesso!')
-    }).error(function(data) {
-      msgs.addError(data.errors)
+    }).catch(function(resp) {
+      msgs.addError(resp.data.errors)
     })
   }
 
@@ -63,14 +63,14 @@ function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
 
   $scope.deleteBillingCycle = function() {
     const url = `${consts.apiUrl}/billingCycles/${$scope.billingCycle._id}`
-    $http.delete(url, $scope.billingCycle).success(function(response) {
+    $http.delete(url, $scope.billingCycle).then(function(response) {
        $scope.billingCycle = {}
        initCreditsAndDebts()
        $scope.getBillingCycles()
        tabs.show($scope, {tabList: true, tabCreate: true})
        msgs.addSuccess('Operação realizada com sucesso!')
-    }).error(function(data) {
-       msgs.addError(data)
+    }).catch(function(resp) {
+       msgs.addError(resp.data)
     })
   }
 
@@ -89,7 +89,7 @@ function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
   }
 
   $scope.addCredit = function(index) {
-    $scope.billingCycle.credits.splice(index + 1, 0, {})
+    $scope.billingCycle.credits.splice(index + 1, 0, {name: null, value: null})
   }
 
   $scope.cloneCredit = function(index, {name, value}) {
