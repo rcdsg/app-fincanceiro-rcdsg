@@ -6,8 +6,7 @@ O curso relacionado ao material disponibilizado neste repositório está disponi
 ## Aulas Grátis
 **Quer conhecer mais sobre o curso?** Acesse algumas aulas grátis que foram disponibilizadas no nosso [Canal do Youtube](https://youtube.com/aulasdeprogramacao).
 
-- [Aula - Bla bla bla 1](https://www.youtube.com/watch?v=UYINAdXB94M)
-- [Aula - Bla bla bla 2](https://www.youtube.com/watch?v=FFKnhBAUxjM)
+- [Playlist do Curso](https://www.youtube.com/watch?v=5sMBYBRwJ5Q&list=PLDm7BSK-M5YleJFYqnxvs7DZruSPmCgya)
 
 ## Configuração
 
