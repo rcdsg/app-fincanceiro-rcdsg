@@ -22,7 +22,7 @@ gulp.task('app.css', function() {
 
 gulp.task('app.js', function() {
   gulp.src('app/**/*.js')
-    .pipe(babel({ presets: ['es2015'] }))
+    .pipe(babel({ presets: ['env'] }))
     .pipe(uglify())
     .pipe(concat('app.min.js'))
     .pipe(gulp.dest('public/assets/js'))
