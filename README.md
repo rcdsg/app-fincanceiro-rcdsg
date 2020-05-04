@@ -1,2 +1,2 @@
-# app-fincanceiro-rcdsg
-APP Fincanceiro
+# Aplicativo Financeiro
+Aplicativo Financeiro desenvolvido em Mongo, Express, Angular e Node JS. Versão Beta.
