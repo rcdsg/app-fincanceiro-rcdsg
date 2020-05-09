@@ -7,7 +7,7 @@ Aplicativo Financeiro com ciclos de pagamento. Versão 1.0
 3. **POSTMan 7.23.0** Testes de requisições HTTP: GET, PUT, POST, DELETE, etc.
 4. **AngularJS Batarang** Extensão para Chrome, acompanhamento de performance.
 
-5. **Node JS vs inicial 6.9.5**
+5. **Node JS vs inicial 6.9.5**  ( NPM versão 3.10.10 )
 6. **MongoDB 3.4.24** Banco de dados não relacional (NoSQL) Not only SQL.
 
 7. **AngularJS 1** Fazendo uso de criação e reutilização de componentes.
