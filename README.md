@@ -1,12 +1,33 @@
-# Mongo, Express, Angular e Node - Primeira Aplicação do ZERO!
+# Primeira Aplicação com Mongo, Express, Angular e Node
+Aplicativo Financeiro com ciclos de pagamento. Versão 1.0
 
-## Sobre o Curso
-O curso relacionado ao material disponibilizado neste repositório está disponibilizado no portal [Cod3r](http://www.cod3r.co/portal/courses) e na [Udemy](https://www.udemy.com/mean-primeira-aplicacao-do-zero).
+## Recursos, Frameworks e Bibliotecas utilizadas
+1. **Sublime / Atom** Para implementação do código
+2. **Tortoise GIT** Para versionamento de arquivos
+3. **POSTMan 7.23.0** Testes de requisições HTTP: GET, PUT, POST, DELETE, etc.
+4. **AngularJS Batarang** Extensão para Chrome, acompanhamento de performance.
 
-## Aulas Grátis
-**Quer conhecer mais sobre o curso?** Acesse algumas aulas grátis que foram disponibilizadas no nosso [Canal do Youtube](https://youtube.com/aulasdeprogramacao).
+5. **Node JS vs inicial 6.9.5**
+6. **MongoDB 3.4.24** Banco de dados não relacional (NoSQL) Not only SQL.
 
-- [Playlist do Curso](https://www.youtube.com/watch?v=5sMBYBRwJ5Q&list=PLDm7BSK-M5YleJFYqnxvs7DZruSPmCgya)
+7. **AngularJS 1** Fazendo uso de criação e reutilização de componentes.
+8. **Express**
+9. **Node Restful**
+10. **Mongoose**
+11. **UI Router** Controle e configurações de rotas para a aplicação.
+12. **ADMIN LTE** Uma biblioteca simples de usar que usa uma template para Dashboard de aplicações.
+13. **Babel**
+14. **Body Parser**
+15. **GULP**
+16. **Run Sequence** Recurso que garante rodar partes do projeto através de uma sequência desejada.
+17. **Uglify JS** Mixar e minificar arquivos para melhor performance da aplicação, compilando em um único arquivo.
+18. **Uglify CSS** Mixar e minificar arquivos para melhor performance da aplicação, compilando em um único arquivo.
+
+## Linguagens
+1. **CSS3**
+2. **HTML 5**
+3. **JSON**
+4. **Javascript**
 
 ## Configuração
 
@@ -14,7 +35,7 @@ Passo à passo da configuração necessária para deixar o ambiente e o projeto 
 
 - Clonar o repositório
 ```sh
-$ git clone https://github.com/CursosCod3r/mean-primeira-app.git
+$ git clone https://github.com/rcdsg/app-fincanceiro-rcdsg.git
 ```
 
 - Mudar para uma tag específica
@@ -28,11 +49,10 @@ $ git pull
 ```
 
 ## Tags
-Foram aplicadas seis tags no master:
+Foram aplicadas 2 tags no master:
 
-1. **exercicios_mongo** - tag com todos os exercícios do mongo concluídos
-2. **exercicios_node** - tag com todos os exercícios do node concluídos
-3. **exercicios_express** - tag com todos os exercícios do express concluídos
-4. **exercicios_angular** - tag com todos os exercícios do angular concluídos
-5. **backend** - tag com o backend concluído
-6. **frontend** - tag com o frontend concluído
+1. **backend** - tag com o backend concluído
+2. **frontend** - tag com o frontend concluído
+
+## Autor
+Rodrigo Costa
