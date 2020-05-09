@@ -1,11 +1,13 @@
 const restful = require('node-restful')
 const mongoose = restful.mongoose
 
+//Schema para creditos
 const creditSchema = new mongoose.Schema({
   name: { type: String, required: true },
   value: { type: Number, min: 0, required: true }
 })
 
+//Schema para debitos
 const debtSchema = new mongoose.Schema({
   name: { type: String, required: true },
   value: { type: Number, min: 0, required: [true, 'Informe o valor do débito!'] },
