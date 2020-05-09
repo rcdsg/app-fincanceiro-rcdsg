@@ -3,4 +3,3 @@ Aplicativo Financeiro desenvolvido em Mongo, Express, Angular e Node JS. Versão
 
 # Autor
 Rodrigo Costa
-@author
