@@ -1,7 +1,6 @@
 {
   "name": "angular1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +8,7 @@
     "production": "gulp --production"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rodrigo Costa",
   "license": "ISC",
   "devDependencies": {
     "admin-lte": "2.3.11",
@@ -30,5 +29,6 @@
     "gulp-watch": "4.3.11",
     "gulp-webserver": "0.9.1",
     "run-sequence": "2.2.0"
-  }
+  },
+  "description": ""
 }
