@@ -18,7 +18,7 @@ Aplicativo Financeiro com ciclos de pagamento. Versão 1.0
 12. **ADMIN LTE** Uma biblioteca simples de usar que usa uma template para Dashboard de aplicações.
 13. **Babel**
 14. **Body Parser**
-15. **GULP**
+15. **GULP** Gerenciador de atividades do projeto
 16. **Run Sequence** Recurso que garante rodar partes do projeto através de uma sequência desejada.
 17. **Uglify JS** Mixar e minificar arquivos para melhor performance da aplicação, compilando em um único arquivo.
 18. **Uglify CSS** Mixar e minificar arquivos para melhor performance da aplicação, compilando em um único arquivo.
