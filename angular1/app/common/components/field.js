@@ -13,7 +13,7 @@ angular.module('primeiraApp').component('field', {
   controller: [
     'gridSystem',
     function(gridSystem) {
-      this.gridClasses = gridSystem.toCssClasses(this.grid)
+      this.$onInit = () => this.gridClasses = gridSystem.toCssClasses(this.grid)
     }
   ],
   template: `

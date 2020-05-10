@@ -17,12 +17,12 @@
 
       const page = parseInt($location.search().page) || 1
 
-      $http.get(`${url}?skip=${(page - 1) * 10}&limit=10`).sucess(function(response){
+      $http.get(`${url}?skip=${(page - 1) * 10}&limit=10`).then(function(response){
         vm.billingCycle = {credits:[{}], debts: [{}]}
-        vm.billingCycles = response
+        vm.billingCycles = response.data
         vm.calculateValues()
 
-        $http.get(`${url}/count`).sucess(function(response){
+        $http.get(`${url}/count`).then(function(response){
           vm.pages = Math.ceil(response.value / 10)
           tabs.show(vm, {tabList: true, tabCreate: true})
         })
@@ -30,13 +30,12 @@
       })
     }
 
-
     vm.create = function(){
-      $http.post(url, vm.billingCycle).sucess(function(response){
+      $http.post(url, vm.billingCycle).then(function(response){
           vm.refresh()
           msgs.addSuccess('Operação realizada com sucesso!')
-      }).error(function(data){
-        msgs.addError(data.errors)
+      }).catch(function(response){
+        msgs.addError(response.data.errors)
       })
 
     }
@@ -57,22 +56,22 @@
     //METODO PARA ATUALIZAR REGISTRO
     vm.update = function() {
       const updateUrl = `${url}/${vm.billingCycle._id}`
-      $http.put(updateUrl, vm.billingCycle).sucess(function(response){
+      $http.put(updateUrl, vm.billingCycle).then(function(response){
         vm.refresh()
         msgs.addSuccess('Operação realizada com sucesso!')
-      }).error(function(data){
-        msgs.addError(data.errors)
+      }).catch(function(response){
+        msgs.addError(response.data.errors)
       })
     }
 
     //METODO PARA EXCLUIR REGISTRO
     vm.delete = function() {
       const deleteUrl = `${url}/${vm.billingCycle._id}`
-      $http.delete(deleteUrl, vm.billingCycle).sucess(function(response){
+      $http.delete(deleteUrl, vm.billingCycle).then(function(response){
         vm.refresh()
         msgs.addSuccess('Operação realizada com sucesso!')
-      }).error(function(data){
-        msgs.addError(data.errors)
+      }).catch(function(response){
+        msgs.addError(response.data.errors)
       })
     }
 
