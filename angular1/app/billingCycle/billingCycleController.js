@@ -2,27 +2,31 @@
 
   angular.module('primeiraApp').controller('BillingCycleCtrl', [
     '$http',
-    //'$location',
+    '$location',
     'msgs',
     'tabs',
     BillingCycleController
   ])
 
-  function BillingCycleController($http, msgs, tabs) {
+  function BillingCycleController($http, $location, msgs, tabs) {
     const vm = this
     const url = 'http://localhost:3003/api/billingCycles'
 
     //Refresh. Apos criação, zerar os dados e passar os novos para o banco mongo
     vm.refresh = function () {
-      $http.get(url).sucess(function(response){
+
+      const page = parseInt($location.search().page) || 1
+
+      $http.get(`${url}?skip=${(page - 1) * 10}&limit=10`).sucess(function(response){
         vm.billingCycle = {credits:[{}], debts: [{}]}
         vm.billingCycles = response
         vm.calculateValues()
-        tabs.show(vm, {tabList: true, tabCreate: true})
 
         $http.get(`${url}/count`).sucess(function(response){
           vm.pages = Math.ceil(response.value / 10)
+          tabs.show(vm, {tabList: true, tabCreate: true})
         })
+
       })
     }
 
