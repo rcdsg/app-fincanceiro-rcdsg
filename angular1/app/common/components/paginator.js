@@ -1,3 +1,5 @@
+(function (){
+
 angular.module('primeiraApp').component('paginator', {
    bindings: {
      url: '@',
@@ -34,3 +36,5 @@ angular.module('primeiraApp').component('paginator', {
       </ul>
    `
 });
+
+})()

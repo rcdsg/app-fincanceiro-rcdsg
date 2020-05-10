@@ -1,3 +1,5 @@
+(function (){
+
 angular.module('primeiraApp').factory('msgs', [
   'toastr',
   MsgsFactory
@@ -22,3 +24,5 @@ function MsgsFactory(toastr) {
 
   return { addSuccess, addError }
 }
+
+})()

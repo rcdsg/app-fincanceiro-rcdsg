@@ -1,3 +1,5 @@
+(function (){
+
 angular.module('primeiraApp').component('contentHeader', {
    bindings: {
       name: '@',
@@ -9,3 +11,5 @@ angular.module('primeiraApp').component('contentHeader', {
       </section>
    `
 });
+
+})()

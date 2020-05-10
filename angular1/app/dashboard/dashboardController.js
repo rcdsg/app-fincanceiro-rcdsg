@@ -19,4 +19,5 @@
 
     vm.getSummary()
   }
+
 })()

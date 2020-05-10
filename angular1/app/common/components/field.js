@@ -1,3 +1,5 @@
+(function() {
+
 angular.module('primeiraApp').component('field', {
   bindings: {
     id: '@',
@@ -25,3 +27,5 @@ angular.module('primeiraApp').component('field', {
    </div>
   `
 });
+
+})()

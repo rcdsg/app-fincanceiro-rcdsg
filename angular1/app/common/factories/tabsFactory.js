@@ -1,3 +1,5 @@
+(function (){
+
 angular.module('primeiraApp').factory('tabs', [ function() {
 
    function show(owner, {
@@ -14,3 +16,5 @@ angular.module('primeiraApp').factory('tabs', [ function() {
 
    return { show }
 }])
+
+})()
