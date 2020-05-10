@@ -6,6 +6,7 @@ angular.module('primeiraApp').factory('msgs', [
 ])
 
 function MsgsFactory(toastr) {
+
   function addSuccess(msgs) {
     addMsg(msgs, 'Sucesso', 'success')
   }

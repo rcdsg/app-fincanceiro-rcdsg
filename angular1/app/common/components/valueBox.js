@@ -1,5 +1,3 @@
-(function (){
-
 angular.module('primeiraApp').component('valueBox', {
   bindings: {
     grid: '@',
@@ -11,7 +9,7 @@ angular.module('primeiraApp').component('valueBox', {
   controller: [
     'gridSystem',
     function(gridSystem) {
-      this.$onInit = () => this.gridClasses = gridSystem.toCssClasses(this.grid)
+      this.gridClasses = gridSystem.toCssClasses(this.grid)
     }
   ],
   template: `
@@ -28,5 +26,3 @@ angular.module('primeiraApp').component('valueBox', {
   </div>
   `
 });
-
-})()

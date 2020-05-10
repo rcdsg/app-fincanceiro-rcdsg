@@ -1,5 +1,3 @@
-(function (){
-
 angular.module('primeiraApp').factory('gridSystem', [ function() {
 
   function toCssClasses(numbers) {
@@ -16,5 +14,3 @@ angular.module('primeiraApp').factory('gridSystem', [ function() {
 
   return { toCssClasses }
 }])
-
-})()
