@@ -1,14 +1,18 @@
+(function (){
+
 angular.module('primeiraApp').controller('BillingCycleCtrl', [
   '$scope',
   '$http',
   '$location',
   'msgs',
   'tabs',
-  'consts',
   BillingCycleController
 ])
 
-function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
+function BillingCycleController($http, $location, msgs, tabs) {
+
+  const vm = this
+  const url = 'htpp://localhost:3003/api/billingCycles'
 
   $scope.getBillingCycles = function() {
     const page = parseInt($location.search().page) || 1
@@ -141,3 +145,5 @@ function BillingCycleController($scope, $http, $location, msgs, tabs, consts) {
 
   $scope.getBillingCycles()
 }
+
+})()
