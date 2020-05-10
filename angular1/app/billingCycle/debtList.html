@@ -9,29 +9,26 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="debt in billingCycle.debts">
+      <tr ng-repeat="debt in bcCtrl.billingCycle.debts">
         <td>
           <input ng-model="debt.name" class="form-control" placeholder="Informe o Nome"
-            ng-readonly="tabDelete" />
+            ng-readonly="bcCtrl.tabDelete" />
         </td>
         <td>
           <input ng-model="debt.value" class="form-control" placeholder="Informe a Valor"
-            ng-readonly="tabDelete" ng-change="calculateValues()" type="number" />
+            ng-readonly="bcCtrl.tabDelete" ng-change="bcCtrl.calculateValues()" type="number" />
         </td>
         <td>
           <input ng-model="debt.status" class="form-control" placeholder="Informe o Status"
-            ng-readonly="tabDelete" />
+            ng-readonly="bcCtrl.tabDelete" />
         </td>
-        <td style="width:150px;" ng-if="!tabDelete">
-          <button class="btn btn-success" ng-click="addDebt($index)"><i class="fa fa-plus"></i></button>
-          <button class="btn btn-warning" ng-click="cloneDebt($index,debt)"><i class="fa fa-clone"></i></button>
-          <button class="btn btn-danger" ng-click="deleteDebt($index)"><i class="fa fa-trash-o"></i></button>
+
+        <td class="table-actions" ng-if="!tabDelete">
+          <button class="btn btn-success" ng-disabled="{bcCtrl.tabDelete}" ng-click="bcCtrl.addDebt($index)"><i class="fa fa-plus"></i></button>
+          <button class="btn btn-warning" ng-disabled="{bcCtrl.tabDelete}" ng-click="bcCtrl.cloneDebt($index,debt)"><i class="fa fa-clone"></i></button>
+          <button class="btn btn-danger" ng-disabled="{bcCtrl.tabDelete}" ng-click="bcCtrl.deleteDebt($index)"><i class="fa fa-trash-o"></i></button>
         </td>
-        <td style="width:150px;" ng-if="tabDelete">
-          <button class="btn btn-success disabled"><i class="fa fa-plus"></i></button>
-          <button class="btn btn-warning disabled"><i class="fa fa-clone"></i></button>
-          <button class="btn btn-danger disabled"><i class="fa fa-trash-o"></i></button>
-        </td>
+
       </tr>
     </tbody>
   </table>

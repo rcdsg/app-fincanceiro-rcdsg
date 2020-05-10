@@ -1,5 +1,7 @@
+(function (){
+
 angular.module('primeiraApp').constant('consts', {
-  appName: 'MEAN - Primeira Aplicação',
+  appName: 'Minha Finança - APP para controle de gastos - RC',
   version: '1.0',
   owner: 'Rodrigo Costa',
   year: '2020',
@@ -8,3 +10,5 @@ angular.module('primeiraApp').constant('consts', {
 }).run(['$rootScope', 'consts', function($rootScope, consts) {
   $rootScope.consts = consts
 }])
+
+})()
